@@ -1,0 +1,31 @@
+body {
+  background: #fff;
+  color: #111;
+  transition: background 0.3s, color 0.3s;
+}
+body.dark {
+  background: #181a20;
+  color: #fff;
+}
+.header, .footer {
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav a { margin-right: 1rem; }
+.hamburger { display: none; }
+.mobile-menu { display: none; }
+@media (max-width: 768px) {
+  nav a { display: none; }
+  .hamburger { display: inline; }
+  body.menu-open .mobile-menu { display: block; }
+}
+.blog-list .grid, .recent-posts .recent-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+.blog-card { /* стили карточки */ }
+body.dark .blog-card { background: #23263a; color: #fff; }
+/* ...дополнительные стили... */
