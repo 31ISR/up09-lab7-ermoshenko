@@ -1,0 +1,8 @@
+---
+const { posts } = Astro.props;
+---
+<section class="blog-list">
+  <div class="grid">
+    {posts.map(post => <BlogCard post={post} />)}
+  </div>
+</section>

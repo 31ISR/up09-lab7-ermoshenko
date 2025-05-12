@@ -1,0 +1,9 @@
+---
+const { posts } = Astro.props;
+---
+<section class="recent-posts">
+  <h2>Recent blog posts</h2>
+  <div class="recent-grid">
+    {posts.map(post => <BlogCard post={post} />)}
+  </div>
+</section>

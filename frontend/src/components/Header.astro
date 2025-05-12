@@ -1,0 +1,20 @@
+---
+const { theme, setTheme } = Astro.props;
+---
+<header class="header">
+  <div class="logo">THE BLOG</div>
+  <nav class="nav">
+    <a href="/">Блог</a>
+    <a href="/about">О нас</a>
+    <button id="theme-toggle" aria-label="Переключить тему" onclick="document.body.classList.toggle('dark')">
+      {theme === 'dark' ? '🌙' : '☀️'}
+    </button>
+  </nav>
+  <button class="hamburger" aria-label="Открыть меню" onclick="document.body.classList.toggle('menu-open')">
+    ☰
+  </button>
+  <div class="mobile-menu">
+    <a href="/">Блог</a>
+    <a href="/about">О нас</a>
+  </div>
+</header>
