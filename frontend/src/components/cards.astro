@@ -3,6 +3,7 @@ import data from "../assets/data.json";
 ---
 
 <h1>All recent posts</h1>
+
 <div class="cards-container">
     {
         data.articles.map((article) => (
@@ -11,7 +12,10 @@ import data from "../assets/data.json";
                     <img src="" alt="rover" />
                 </div>
                 <div class="card-body">
-                    <span class="tag tag-teal">Technology</span>
+                    {article.tags.map((tag) => (
+                    
+                    <span class="tag tag-teal">#{tag} </span>
+                    ))}
                     <h4>{article.title}</h4>
                     <p>{article.desc}</p>
                     <div class="user">
